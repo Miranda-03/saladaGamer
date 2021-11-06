@@ -1,0 +1,132 @@
+coleccion mothers
+
+{
+	"_id" : 1,
+	"nombre" : "mother asus"
+	"tamaño" : "atx",
+	"slots_ram" : 4,
+	"type" : "intel",
+	"gen_type" : [5000, 7000],
+	"type_ram" : "ddr4",
+	"consumo" : 50,
+	"id_foto": "url",
+	"cant_sata" : 4,
+	"cant_m2" : 2
+}
+
+cleccion memorias ram
+
+{
+	"_id" : 1,
+	"nombre" : "g-skill 23232",
+	"tipo" : "ddr4",
+	"frecuencia" : 4600,
+	"consumo" : 20,
+	"capacidad" : 8,
+	"id_foto" : "url",
+}
+
+coleccion procesadores
+
+{
+	"_id" : 3,
+	"nombre" : "intel i5 7500",
+	"generacion" : 7000,
+	"consumo" : 70,
+	"grafica" : "intel hd graphics",
+	"foto" : "url",
+}
+
+
+coleccion cooler 
+
+
+{
+	"_id" : 4,
+	"nombre" : "cooler generico",
+	"consumo" : 5,
+	"foto" : "url"
+}
+
+coleccion almacenamiento 
+
+{
+	"_id" : 5,
+	"nombre" : "toshiba 500",
+	"type" : "hdd",
+	"capacidad" : 500,
+	"consumo" : 40,
+	"velocidad" : "2100 rpm",
+	"foto" : "url"
+} 
+
+
+coleccion fuente 
+
+{
+	"_id" : 3,
+	"nombre" : "fuente generica 500 wats",
+	"wats" : 500,
+	"foto" : "url"
+}
+
+coleccion gabinete
+
+{
+	"_id" : 4,
+	"nombre" : "corsair 700x",
+	"tamaño" : ["atx", "micro atx", "mini atx"],
+	"tamaño_fuente" : [ "atx" , "mini atx"],
+	"foto" : "url"
+}
+
+coleccion gpu
+
+{
+	"_id" : 7,
+	"nombre" : "radeon rx 570x 8gb",
+	"consumo" : 100,
+	"memoria" : 8,
+	"velocidad_memoria" : "4500hz",
+	"velocidad_procesador" : "4500gz",
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
