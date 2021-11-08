@@ -1,0 +1,8 @@
+[{
+  "_id": {
+    "$oid": "6189774dc986e979c036f994"
+  },
+  "nombre": "nombre",
+  "foto": "url",
+  "wats": 0
+}]

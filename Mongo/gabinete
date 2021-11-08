@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "6189777fc986e979c036f995"
+  },
+  "nombre": "nombre",
+  "foto": "url",
+  "tamañoFuente": "tamañoFuente",
+  "tamañoMother": [
+    "tamaño1"
+  ]
+}]

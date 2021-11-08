@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "61897314c986e979c036f98f"
+  },
+  "nombre": "nombre",
+  "tamaño": "tamaño",
+  "cantM2": 0,
+  "cantSatas": 0,
+  "consumo": 0,
+  "foto": "url",
+  "generaciones": [
+    "gen"
+  ],
+  "marca": "intel",
+  "slotsRam": 2,
+  "tipoRam": "DDR"
+}]

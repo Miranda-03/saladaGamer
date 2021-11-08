@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "61897801c986e979c036f996"
+  },
+  "nombre": "nombre",
+  "consumo": 0,
+  "memoria": 0,
+  "velocidadMemoria": 0,
+  "velocidadProcesamiento": 0
+}]

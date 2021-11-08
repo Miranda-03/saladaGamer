@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "61897556c986e979c036f991"
+  },
+  "capacidada": 0,
+  "consumo": 0,
+  "foto": "url",
+  "frecuencia": 0,
+  "nombre": "nombre",
+  "tipo": "DDR"
+}]
