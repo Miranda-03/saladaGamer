@@ -5,7 +5,8 @@
   "consumo": 0,
   "foto": "url",
   "generacion": 0,
-  "grafica": false,
   "nombre": "nombre",
-  "tipoRam": "DDR"
+  "precio": 0,
+  "graficaIntegrada": false,
+  "marca": "intel/AMD"
 }]

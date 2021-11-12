@@ -4,5 +4,7 @@
   },
   "nombre": "nombre",
   "foto": "url",
-  "wats": 0
+  "wats": 0,
+  "precio": 0,
+  "tamaño": "ATx"
 }]

@@ -7,5 +7,6 @@
   "foto": "url",
   "frecuencia": 0,
   "nombre": "nombre",
-  "tipo": "DDR"
+  "tipo": "DDR",
+  "precio": 0
 }]

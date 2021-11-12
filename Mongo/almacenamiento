@@ -7,5 +7,6 @@
   "consumo": 0,
   "foto": "url",
   "tipo": "tipo",
-  "velocidad": 0
+  "velocidad": 0,
+  "precio": 0
 }]

@@ -4,5 +4,6 @@
   },
   "nombre": "nombre",
   "consumo": 0,
-  "foto": "url"
+  "foto": "url",
+  "precio": 0
 }]
