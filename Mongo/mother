@@ -1,17 +1,19 @@
 [{
   "_id": {
-    "$oid": "61897314c986e979c036f98f"
+    "$oid": "618e75a13d63983153ef1a35"
   },
   "nombre": "nombre",
-  "tamaño": "tamaño",
-  "cantM2": 0,
-  "cantSatas": 0,
-  "consumo": 0,
+  "tamaño": "ATX",
+  "cantM2": 1,
+  "cantSatas": 2,
+  "consumo": 50,
   "foto": "url",
   "generaciones": [
-    "gen"
+    1,
+    2
   ],
-  "marca": "intel",
+  "marca": "AMD",
   "slotsRam": 2,
-  "tipoRam": "DDR"
+  "tipoRam": "DDR4",
+  "precio": 229440062
 }]
