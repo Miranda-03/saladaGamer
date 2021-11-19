@@ -21,6 +21,14 @@ public class Mother extends ComponenteInterno {
         this.tipoRam = tipoRam;
     }
 
+    public boolean procesadorCompatible(Procesador procesador){
+        for (int i = 0; i <generaciones.size(); i++) {
+            if(procesador.getGeneracion()== generaciones.get(i)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public String getTamaño() {
         return tamaño;
