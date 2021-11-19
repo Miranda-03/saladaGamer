@@ -1,12 +1,12 @@
 package com.salada.api;
 
-public class procesador extends ComponenteInterno{
+public class Procesador extends ComponenteInterno{
 
-    private Integer generacion;
+    private String generacion;
     private boolean graficaIntegrada;
     private  String marca;
 
-    public procesador(String id, String nombre, String foto, Integer precio, float consumo, Integer generacion, boolean graficaIntegrada, String marca) {
+    public Procesador(String id, String nombre, String foto, Integer precio, float consumo, String generacion, boolean graficaIntegrada, String marca) {
         super(id, nombre, foto, precio, consumo);
         this.generacion = generacion;
         this.graficaIntegrada = graficaIntegrada;
@@ -15,11 +15,11 @@ public class procesador extends ComponenteInterno{
 
 
 
-    public Integer getGeneracion() {
+    public String getGeneracion() {
         return generacion;
     }
 
-    public void setGeneracion(Integer generacion) {
+    public void setGeneracion(String generacion) {
         this.generacion = generacion;
     }
 
