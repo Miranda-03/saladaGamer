@@ -12,6 +12,11 @@ public abstract class Componente implements InterfazComponente{
         this.foto = foto;
         this.precio = precio;
     }
+    
+    @Override
+    public String getComponente() {
+        return null;
+    }
 
     public String getId() {
         return id;
