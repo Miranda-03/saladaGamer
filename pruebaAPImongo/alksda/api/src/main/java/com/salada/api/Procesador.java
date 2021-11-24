@@ -38,4 +38,19 @@ public class Procesador extends ComponenteInterno{
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    @Override
+    public String obetenerDescripcion() {
+        String grafica ;
+        if(this.graficaIntegrada){
+            grafica = " Tiene grafica integrada";
+        }
+        else{
+            grafica = " no tiene grafica integrada";
+        }
+
+        String descripcion = "generacion " + this.getGeneracion() + grafica;
+
+        return descripcion;
+    }
 }

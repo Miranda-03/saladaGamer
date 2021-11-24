@@ -27,4 +27,10 @@ public class Fuente extends Componente{
     public void setTamaño(String tamaño) {
         this.tamaño = tamaño;
     }
+
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Provee una energia de " + this.getWatts() + " y tiene un tamaño de " + this.getTamaño();
+        return descripcion;
+    }
 }

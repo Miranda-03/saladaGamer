@@ -27,4 +27,12 @@ public class Gabinete extends Componente{
     public void setTamañoMother(ArrayList<String> tamañoMother) {
         this.tamañoMother = tamañoMother;
     }
+
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Es compatible con los siguientes tamaños de fuentes: " + this.getTamañoFuente() +
+                ", y con los siguientes tamaños de fuente: " + this.getTamañoMother();
+
+        return descripcion;
+    }
 }

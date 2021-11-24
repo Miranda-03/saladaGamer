@@ -36,4 +36,12 @@ public class memoriaRam extends ComponenteInterno{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Es de " + this.getCapacidad() + " con una frecuencia de " + this.getFrecuencia() +
+                " y es de tipo " + this.getTipo();
+
+        return descripcion;
+    }
 }

@@ -49,4 +49,6 @@ public abstract class Componente implements InterfazComponente{
     public void setPrecio(Integer precio) {
         this.precio = precio;
     }
+
+    public abstract String obetenerDescripcion();
 }

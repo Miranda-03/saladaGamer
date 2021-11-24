@@ -88,4 +88,13 @@ public class Mother extends ComponenteInterno {
         this.tipoRam = tipoRam;
     }
 
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Tamaño " + this.getTamaño() + ", cantidad de M.2" + this.getCantM2() +
+                ", cantidad de satas " + this.getCantSatas() + ", compatible con: " + this.getGeneraciones().toString() +
+                ", cantidad de slots de ram " + this.getSlotsRam() + ", compatible con preocesadores " + this.getMarca();
+
+
+        return descripcion;
+    }
 }

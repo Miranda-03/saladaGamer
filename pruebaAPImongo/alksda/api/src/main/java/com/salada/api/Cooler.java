@@ -7,4 +7,9 @@ public class Cooler extends ComponenteInterno {
     }
 
 
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Ventilador";
+        return descripcion;
+    }
 }

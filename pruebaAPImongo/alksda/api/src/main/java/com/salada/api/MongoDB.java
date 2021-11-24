@@ -112,7 +112,7 @@ class MongoDB {
                 memoriaRam ram = new memoriaRam(id, nombre, foto, precio, consumo, capacidad, frecuencia, tipo);
                 componentes.add(ram);
             }
-            else if(componente.equals("motherboard")){
+            else if(componente.equals("mother")){
                 String tamaño = documento.getString("tamaño");
                 Integer cantM2 = documento.getInteger("cantM2");
                 Integer cantSatas = documento.getInteger("cantSatas");
@@ -123,6 +123,7 @@ class MongoDB {
                 String marca = documento.getString("marca");
                 Mother mother = new Mother(id, nombre, foto, precio, consumo, tamaño, cantM2, cantSatas, generaciones, slotsRam, tipoRam, marca);
                 componentes.add(mother);
+                System.out.println("funciona");
             }
             else if(componente.equals("procesador")){
                 String generacion = documento.getString("generacion");

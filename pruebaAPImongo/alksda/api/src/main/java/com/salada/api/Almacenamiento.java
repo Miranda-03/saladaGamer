@@ -36,4 +36,11 @@ public class Almacenamiento extends ComponenteInterno{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Tiene una capacidad de " + this.getCapacidad() +
+                ", con una velocidad de " + this.getVelocidad() + " y es de tipo " + this.getTipo();
+        return descripcion;
+    }
 }

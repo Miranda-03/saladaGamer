@@ -38,4 +38,11 @@ public class gpu extends ComponenteInterno{
     }
 
 
+    @Override
+    public String obetenerDescripcion() {
+        String descripcion = "Tiene una memoria de " + this.getMemoria() + " con una velocidad de " + this.getVelocidadMemoria() +
+                " y con una velocidad de procesamiento de " + this.getVelocidadProcesamiento();
+
+        return descripcion;
+    }
 }

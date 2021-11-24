@@ -3,7 +3,7 @@
 let Logeado;
 
 $.ajax({
-  url: "http://localhost:8080/api/datos/componente/motherboard/4",
+  url: "http://localhost:8080/api/datos/componente/mother/0",
   type: 'GET'
 })
 .done(function (data) {
