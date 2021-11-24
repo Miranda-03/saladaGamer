@@ -6,7 +6,7 @@ public class Procesador extends ComponenteInterno{
     private boolean graficaIntegrada;
     private  String marca;
 
-    public Procesador(String id, String nombre, String foto, Integer precio, float consumo, String generacion, boolean graficaIntegrada, String marca) {
+    public Procesador(Integer id, String nombre, String foto, Integer precio, float consumo, String generacion, boolean graficaIntegrada, String marca) {
         super(id, nombre, foto, precio, consumo);
         this.generacion = generacion;
         this.graficaIntegrada = graficaIntegrada;

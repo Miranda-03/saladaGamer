@@ -4,7 +4,7 @@ public class Fuente extends Componente{
  private Integer watts;
  private String tamaño;
 
-    public Fuente(String id, String nombre, String foto, Integer precio, Integer watts, String tamaño) {
+    public Fuente(Integer id, String nombre, String foto, Integer precio, Integer watts, String tamaño) {
         super(id, nombre, foto, precio);
         this.watts = watts;
         this.tamaño = tamaño;

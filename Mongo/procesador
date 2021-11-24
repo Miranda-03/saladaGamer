@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "61897483c986e979c036f990"
+    "$oid": "61897483c986e979c036f110"
   },
   "consumo": 0,
   "foto": "url",
@@ -8,5 +8,5 @@
   "nombre": "nombre",
   "precio": 0,
   "graficaIntegrada": false,
-  "marca": "intel/AMD"
+  "marca": "Intel"
 }]

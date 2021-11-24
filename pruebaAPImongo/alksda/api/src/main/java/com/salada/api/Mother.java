@@ -9,9 +9,10 @@ public class Mother extends ComponenteInterno {
     private ArrayList<String> generaciones;
     private Integer slotsRam;
     private String tipoRam;
+    private String marca;
 
-    public Mother(String id, String nombre, String foto, Integer precio, float consumo, String tamaño,
-                  Integer cantM2, Integer cantSatas, ArrayList<String> generaciones, Integer slotsRam, String tipoRam) {
+    public Mother(Integer id, String nombre, String foto, Integer precio, float consumo, String tamaño,
+                  Integer cantM2, Integer cantSatas, ArrayList<String> generaciones, Integer slotsRam, String tipoRam, String marca) {
         super(id, nombre, foto, precio, consumo);
         this.tamaño = tamaño;
         this.cantM2 = cantM2;
@@ -19,6 +20,7 @@ public class Mother extends ComponenteInterno {
         this.generaciones = generaciones;
         this.slotsRam = slotsRam;
         this.tipoRam = tipoRam;
+        this.marca = marca;
     }
 
     public boolean procesadorCompatible(Procesador procesador){
@@ -28,6 +30,14 @@ public class Mother extends ComponenteInterno {
             }
         }
         return false;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getTamaño() {

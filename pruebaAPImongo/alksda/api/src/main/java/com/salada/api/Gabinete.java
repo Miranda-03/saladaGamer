@@ -6,7 +6,7 @@ public class Gabinete extends Componente{
     private String tamañoFuente;
     private ArrayList<String> tamañoMother;
 
-    public Gabinete(String id, String nombre, String foto, Integer precio, String tamañoFuente, ArrayList<String> tamañoMother) {
+    public Gabinete(Integer id, String nombre, String foto, Integer precio, String tamañoFuente, ArrayList<String> tamañoMother) {
         super(id, nombre, foto, precio);
         this.tamañoFuente = tamañoFuente;
         this.tamañoMother = tamañoMother;

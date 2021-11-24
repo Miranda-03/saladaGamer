@@ -1,12 +1,12 @@
 package com.salada.api;
 
 public abstract class Componente implements InterfazComponente{
-    private String id;
+    private Integer id;
     private String nombre;
     private String foto;//Url de la foto
     private Integer precio;
 
-    public Componente(String id, String nombre, String foto, Integer precio) {
+    public Componente(Integer id, String nombre, String foto, Integer precio) {
         this.id = id;
         this.nombre = nombre;
         this.foto = foto;
@@ -18,11 +18,11 @@ public abstract class Componente implements InterfazComponente{
         return null;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

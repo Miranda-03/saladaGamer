@@ -6,7 +6,7 @@ public class gpu extends ComponenteInterno{
     private Integer velocidadMemoria;
     private  Integer velocidadProcesamiento;
 
-    public gpu(String id, String nombre, String foto, Integer precio, float consumo, Integer memoria, Integer velocidadMemoria, Integer velocidadProcesamiento) {
+    public gpu(Integer id, String nombre, String foto, Integer precio, float consumo, Integer memoria, Integer velocidadMemoria, Integer velocidadProcesamiento) {
         super(id, nombre, foto, precio, consumo);
         this.memoria = memoria;
         this.velocidadMemoria = velocidadMemoria;

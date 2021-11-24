@@ -26,16 +26,18 @@ public class Controller {
     }
 
 
-    @RequestMapping(value = "/datos/alumnos", method = RequestMethod.GET)
-    public ResponseEntity<Object> obtenerPaginas()  {
-        HashMap<String, String> datos = new HashMap<>();
-        datos.put("fun", "ciona");
+    @RequestMapping(value = "/datos/componente/{coleccion}/{cantidad}", method = RequestMethod.GET)
+    public ResponseEntity<Object> obtenerComponenteEspecifico(@PathVariable String coleccion, @PathVariable int cantidad)  {
+        HashMap<String, Object> datos = new HashMap<>();
+        accesoMongo.conectar("saladaGamer", coleccion);
+        datos = accesoMongo.obtenerDatos(coleccion, cantidad);
         return new ResponseEntity<>(datos, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/datos/alumnos/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Object> obtenerAlumno(@PathVariable int id)  {
+    @RequestMapping(value = "/datos/procesador/{marca}", method = RequestMethod.GET)
+    public ResponseEntity<Object> obtenerAlumno(@PathVariable boolean marca)  {
         HashMap<String, Object> datos = new HashMap<>();
+        datos = accesoMongo.procesadoresMarca(marca);
         return new ResponseEntity<>(datos, HttpStatus.OK);
     }
 
