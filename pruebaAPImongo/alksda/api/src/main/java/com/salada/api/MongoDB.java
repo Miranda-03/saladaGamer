@@ -4,6 +4,8 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.*;
 import org.bson.Document;
 import org.springframework.stereotype.Service;
+
+import javax.print.Doc;
 import java.util.*;
 
 @Service
@@ -12,9 +14,11 @@ class MongoDB {
     private MongoDatabase baseDeDatos;
     private MongoCollection coleccion;
 
+    private HashMap<String, Object> componenteActual;
 
     public MongoDB() {
         this.conectar("saladaGamer","procesador");
+        this.componenteActual = new HashMap<>();
     }
 
     public void conectar(String baseDeDatos,String coleccion){
@@ -187,12 +191,135 @@ class MongoDB {
 
         }
 
-        datosProcesadores.put("procesadores", procesadores);
-
+        datosProcesadores.put("componente", procesadores);
+        this.setComponenteActual(datosProcesadores);
         return datosProcesadores;
     }
 
+    public HashMap<String, Object> siguienteComponente(String componente, Integer id){
+        HashMap<String, Object> datos = new HashMap<>();
+        ArrayList<Componente> componentes = new ArrayList<>();
+        if(componente.equals("procesador")){
+            String filtro = "{id : "+  id.toString() + " }";
+            Document filtroJSon = Document.parse(filtro);
+            this.conectar("saladaGamer", "procesador");
+            FindIterable resultado = coleccion.find(filtroJSon);
+            MongoCursor iterador = resultado.iterator();
+            Procesador procesador = null;
+            while (iterador.hasNext()){
+                Document documento = (Document) iterador.next();
+                Integer id1 = documento.getInteger("id");
+                String nombre = documento.getString("nombre");
+                String foto = documento.getString("foto");
+                Integer precio = documento.getInteger("precio");
+                String generacion = documento.getString("generacion");
+                boolean graficaIntegrada = documento.getBoolean("graficaIntegrada");
+                String marcaProcesador = documento.getString("marca");
+                Integer consumo =  documento.getInteger("consumo");
 
+                procesador  = new Procesador(id1, nombre, foto, precio, consumo, generacion, graficaIntegrada, marcaProcesador);
+
+            }
+            this.conectar("saladaGamer", "motherboard");
+
+            String filtroMother = "{marca: " + '"' +procesador.getMarca() + '"' +", " + "generaciones : "+ '"' + procesador.getGeneracion() + '"' +"}";
+            Document jsonFiltro = Document.parse(filtroMother);
+            System.out.println(jsonFiltro);
+            FindIterable resultadoMothers = coleccion.find(jsonFiltro);
+            MongoCursor iteradorMother = resultadoMothers.iterator();
+            while(iteradorMother.hasNext()){
+                Document documento = (Document) iteradorMother.next();
+                Integer id1 = documento.getInteger("id");
+                String nombre = documento.getString("nombre");
+                String foto = documento.getString("foto");
+                Integer precio = documento.getInteger("precio");
+                String tamaño = documento.getString("tamaño");
+                Integer cantM2 = documento.getInteger("cantM2");
+                Integer cantSatas = documento.getInteger("cantSatas");
+                ArrayList<String> generaciones = (ArrayList<String>) documento.get("generaciones");
+                Integer slotsRam = documento.getInteger("slotsRam");
+                String tipoRam = documento.getString("tipoRam");
+                Integer consumo =  documento.getInteger("consumo");
+                String marca = documento.getString("marca");
+                Mother mother = new Mother(id, nombre, foto, precio, consumo, tamaño, cantM2, cantSatas, generaciones, slotsRam, tipoRam, marca);
+                componentes.add(mother);
+                System.out.println(componentes);
+            }
+
+        }
+        else if(componente.equals("motherboard")){
+            this.conectar("saladaGamer", "motherboard");
+            String filtroRamMother = "{id : "+ id +"}";
+            Document filtroJsonMotherRam = Document.parse(filtroRamMother);
+            FindIterable resultadoMotherRam = coleccion.find(filtroJsonMotherRam);
+            MongoCursor iteradorMotherRam = resultadoMotherRam.iterator();
+            Document documento = (Document) iteradorMotherRam.next();
+            Integer id1 = documento.getInteger("id");
+            String nombre = documento.getString("nombre");
+            String foto = documento.getString("foto");
+            Integer precio = documento.getInteger("precio");
+            String tamaño = documento.getString("tamaño");
+            Integer cantM2 = documento.getInteger("cantM2");
+            Integer cantSatas = documento.getInteger("cantSatas");
+            ArrayList<String> generaciones = (ArrayList<String>) documento.get("generaciones");
+            Integer slotsRam = documento.getInteger("slotsRam");
+            String tipoRam = documento.getString("tipoRam");
+            Integer consumo =  documento.getInteger("consumo");
+            String marca = documento.getString("marca");
+            Mother mother = new Mother(id, nombre, foto, precio, consumo, tamaño, cantM2, cantSatas, generaciones, slotsRam, tipoRam, marca);
+
+            this.conectar("saladaGamer", "memoriaRam");
+
+            String filtroRam = "{tipo :"+ '"' +mother.getTipoRam()+ '"'  + "}";
+            Document filtroJsonRam = Document.parse(filtroRam);
+            FindIterable resultadoRam = coleccion.find(filtroJsonRam);
+            MongoCursor iteradorRam  = resultadoRam.iterator();
+
+            while(iteradorRam.hasNext()){
+                Document documento1 = (Document) iteradorRam.next();
+                Integer id2 = documento.getInteger("id");
+                String nombre1 = documento.getString("nombre");
+                String foto1 = documento.getString("foto");
+                Integer precio1 = documento.getInteger("precio");
+                Integer capacidad = documento.getInteger("capacidada");
+                Integer frecuencia = documento.getInteger("frecuencia");
+                String tipo = documento.getString("tipo");
+                Integer consumo1 =  documento.getInteger("consumo");
+                memoriaRam ram = new memoriaRam(id2, nombre1, foto1, precio1, consumo1, capacidad, frecuencia, tipo);
+                componentes.add(ram);
+            }
+        }
+        else if(componente.equals("memoriaRam")){
+            this.setComponenteActual(this.obtenerDatos("gpu", 0));
+            return this.obtenerDatos("gpu", 0);
+        }
+        else if(componente.equals("gpu")){
+            this.setComponenteActual(this.obtenerDatos("fuente", 0));
+            return  this.obtenerDatos("fuente", 0);
+        }
+        else if(componente.equals("fuente")){
+            this.setComponenteActual(this.obtenerDatos("cooler", 0));
+            return this.obtenerDatos("cooler", 0);
+        }
+        else if(componente.equals("cooler")){
+            this.setComponenteActual(this.obtenerDatos("almacenamiento", 0));
+            return this.obtenerDatos("almacenamiento", 0);
+        }
+
+        datos.put("componentes", componentes);
+        this.setComponenteActual(datos);
+        return datos;
+    }
+
+
+
+    public HashMap<String, Object> getComponenteActual() {
+        return componenteActual;
+    }
+
+    public void setComponenteActual(HashMap<String, Object> componenteActual) {
+        this.componenteActual = componenteActual;
+    }
 
 
     /**

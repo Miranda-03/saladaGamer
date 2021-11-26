@@ -5,35 +5,57 @@
         <!-- <link rel="icon" type="image/xcf" href="recursos/mw.png"> -->
         <link rel="stylesheet" type="text/css" href="recursos/estilosGenerales.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <meta charset = "utf-8">
+        <script src="jquery-3.6.0.js"></script>
         <script src="script.js"></script>
         <nav id="nav-principal">
             <img id="logoSalada" src="recursos/imagenes/Salada_Gamer.png">
             <div id="buscador">
                 <input type="text" placeholder="Buscar Productos">
             </div>
-            <ul id="nav-botones">
-                
-                <li>
-                    <a href="#" class="nav-link">AMD</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">INTEL</a>
-                </li>
-                <li>
-                    <a href="index.html" class="nav-link last" >Inicio</a>
-                </li>
-            </ul>
+            
         </nav>
     </head>
     <body>
-        <div id="principal">
-            <div id="marcas">
-                <img id="marcaIntel" src="recursos/imagenes/intelMarca.jpg" onclick="opcionIntel()">
-                <img id="marcaAmd" src="recursos/imagenes/amd.jpg">
-            </div>
-            <div id="productos">
-                <h1>Seleccione una mother</h1>
+        <div id="fondo"></div>
+        <div id="div-botones-procesadores">
+            <div id="botones-procesadores">
+                <button type="button" onclick="marca(true)" id="boton-intel">Intel</button>
+                <button type="button" onclick="marca(false)" id="boton-amd">AMD</button>
             </div>
         </div>
+        
+
+        <div id="armado-div">
+
+            <div id="principal">
+                <div id="armado">
+                    
+                
+                </div>
+    
+                <div class="productos" id="MostrarComponente1">
+                    
+                    <ul id="listaMothers">
+                        <li class="mother" v-for="mother in componentes">
+                            <div class= "contenedor-imagen">
+                                <img id="fotoMother" v-bind:src="mother.foto">
+                            </div>   
+                            <div class="informacion">
+                                <h1 id="nombre">{{mother.nombre}}</h1>
+                                
+                                <h2 id="precio">${{mother.precio}} </h2>
+                            </div>         
+                            <button type="button" id="comenzarArmadoMother" v-on:click=“agregar(mother.id)">Agregar</button>
+                        </li>
+                      </ul>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        
     </body>

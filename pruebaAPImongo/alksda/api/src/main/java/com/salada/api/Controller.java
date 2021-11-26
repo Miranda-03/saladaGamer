@@ -21,7 +21,7 @@ public class Controller {
     private MongoDB accesoMongo;
 
     public Controller() {
-       // this.accesoABaseDeDatos = new AccesoBaseDeDatos("personas","alumnos");
+        // this.accesoABaseDeDatos = new AccesoBaseDeDatos("personas","alumnos");
         this.accesoMongo = new MongoDB();
     }
 
@@ -40,6 +40,25 @@ public class Controller {
         datos = accesoMongo.procesadoresMarca(marca);
         return new ResponseEntity<>(datos, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/datos/componenteElegido/{componente}/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Object> obtenerSiguienteComponente(@PathVariable String componente, @PathVariable int id){
+        HashMap<String, Object> datos = new HashMap<>();
+        datos = accesoMongo.siguienteComponente(componente, id);
+        return  new ResponseEntity<>(datos, HttpStatus.OK);
+    }
+
+
+    @RequestMapping(value = "/datos/componenteActual", method = RequestMethod.GET)
+    public ResponseEntity<Object> obtenerActual(){
+        HashMap<String, Object> datos;
+        datos = accesoMongo.getComponenteActual();
+        System.out.println(datos);
+        return  new ResponseEntity<>(datos, HttpStatus.OK);
+    }
+
+
+
 
     @RequestMapping(value = "/datos/alumnos/{id}", method = RequestMethod.POST)
     public ResponseEntity<Object> agregarPagina(@RequestBody HashMap alumno, @PathVariable int id){
