@@ -2,10 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-<<<<<<< HEAD
-=======
     font-family: Arial;
->>>>>>> f2b9ac0 (api casi terminada)
 }
 
 #nav-principal{
@@ -96,20 +93,14 @@
     width: 100%;
 }
 
-<<<<<<< HEAD
-#principal{
-    background-image: radial-gradient(#1c384c,#111);    
-=======
 #fondo{
     position: fixed;
     width: 100%;
     height: 100%;
     background-image: radial-gradient(#1c384c,#111);   
-    z-index: -1;
 }
 
 #principal{   
->>>>>>> f2b9ac0 (api casi terminada)
     width: 100%;
     height: 100%;
     position: absolute;
@@ -119,13 +110,6 @@
     width: 100%;
 }
 #bienvenida{
-<<<<<<< HEAD
-    margin-top: 231px;
-    color: #e1e1e1;
-    margin-left: 10%;
-    font-size: small;
-    font-family: Arial;
-=======
     color: #e1e1e1;
     font-size: small;
     font-family: Arial;
@@ -135,21 +119,12 @@
     grid-template-columns: 45% 496px;
     align-items: center;
     justify-content: center;
->>>>>>> f2b9ac0 (api casi terminada)
 }
 
 #bienvenida h1{
     margin-bottom: 10px;
 }
-<<<<<<< HEAD
-#intel{
-    scale: 0.65;
-    margin-left: 48%;
-    margin-top: -23%;
-}
-=======
 
->>>>>>> f2b9ac0 (api casi terminada)
 #logoSalada{
 margin-left: 2%;
 }
@@ -170,13 +145,6 @@ margin-left: 2%;
     border-radius: 5px;
     margin-bottom: 15px;
 }
-<<<<<<< HEAD
-#productos{
-    display:none;
-    margin-left: 34.5%;
-    font-family: Arial;
-    font-size: 13pt;
-=======
 
 .contenedor-imagen{
     background-color: white;
@@ -273,28 +241,4 @@ margin-left: 2%;
     100%{
         transform: translateY(0px);
     }
-}
-
-
-#botones-procesadores{
-    width: fit-content;
-    margin: auto;
-}
-
-#botones-procesadores button{
-    border: none;
-    padding: 40px 91px 40px;
-    font-size: 50pt;
-    cursor: pointer;
-}
-
-#principal{
-    position: absolute;
- display: block;
-}
-
-#div-botones-procesadores{
-width: 100%;
-padding-top: 340px;
->>>>>>> f2b9ac0 (api casi terminada)
 }
