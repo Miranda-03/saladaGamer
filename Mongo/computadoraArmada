@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "619aa4f43c9a1a76ee20b0ee"
+  },
+  "id": 1,
+  "usuarioID": 1,
+  "coolerID": 1,
+  "fuenteID": 1,
+  "gabineteID": 1,
+  "gpuID": 1,
+  "memoriaRamID": 1,
+  "motherboard": 1,
+  "procesadorID": 1
+}]

@@ -1,12 +1,25 @@
 [{
   "_id": {
-    "$oid": "61897483c986e979c036f110"
+    "$oid": "61897483c986e979c036f990"
   },
   "consumo": 0,
   "foto": "url",
-  "generacion": 0,
+  "generacion": "0",
   "nombre": "nombre",
   "precio": 0,
   "graficaIntegrada": false,
-  "marca": "Intel"
+  "marca": "intel/AMD",
+  "id": 1
+},{
+  "_id": {
+    "$oid": "6199800043c9815b6fe4be58"
+  },
+  "consumo": 30,
+  "foto": "url",
+  "generacion": "2",
+  "nombre": "intel 7300",
+  "precio": 34000,
+  "graficaIntegrada": false,
+  "marca": "Intel",
+  "id": 2
 }]

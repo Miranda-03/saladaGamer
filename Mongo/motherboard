@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "618e75a13d63983153ef1a35"
+  },
+  "nombre": "Asus rog strix z-390 wifi",
+  "tamaño": "ATX",
+  "cantM2": 1,
+  "cantSatas": 2,
+  "consumo": 50,
+  "foto": "recursos/imagenes/mother.png",
+  "generaciones": [
+    "1",
+    "2"
+  ],
+  "slotsRam": 2,
+  "precio": 40000,
+  "marca": "Intel",
+  "tipoRam": "DDR4",
+  "id": 1
+},{
+  "_id": {
+    "$oid": "618e75a13d63983153ef1a37"
+  },
+  "nombre": "Gigabyte B460m Ds3h V2",
+  "tamaño": "ATX",
+  "cantM2": 1,
+  "cantSatas": 2,
+  "consumo": 50,
+  "foto": "recursos/imagenes/mother.png",
+  "generaciones": [
+    "1",
+    "2"
+  ],
+  "marca": "AMD",
+  "slotsRam": 2,
+  "tipoRam": "DDR4",
+  "precio": 14999,
+  "id": 2
+},{
+  "_id": {
+    "$oid": "619a7229fb2f81b97999915e"
+  },
+  "nombre": "Asus Rog Strix B550-e Gaming Am4",
+  "tamaño": "ATX",
+  "cantM2": 1,
+  "cantSatas": 2,
+  "consumo": 50,
+  "foto": "recursos/imagenes/mother.png",
+  "generaciones": [
+    "1",
+    "2"
+  ],
+  "marca": "AMD",
+  "slotsRam": 2,
+  "tipoRam": "DDR4",
+  "precio": 37999,
+  "id": 3
+},{
+  "_id": {
+    "$oid": "619a7230fb2f81b97999915f"
+  },
+  "nombre": "Z590-a Asus Prime Lga1200",
+  "tamaño": "ATX",
+  "cantM2": 1,
+  "cantSatas": 2,
+  "consumo": 50,
+  "foto": "recursos/imagenes/mother2.jpeg",
+  "generaciones": [
+    "1",
+    "2"
+  ],
+  "marca": "AMD",
+  "slotsRam": 2,
+  "tipoRam": "DDR4",
+  "precio": 42999,
+  "id": 4
+}]

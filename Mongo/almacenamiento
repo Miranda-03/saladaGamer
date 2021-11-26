@@ -8,5 +8,6 @@
   "foto": "url",
   "tipo": "tipo",
   "velocidad": 0,
-  "precio": 0
+  "precio": 0,
+  "id": 1
 }]

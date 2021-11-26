@@ -5,6 +5,8 @@
   "contraseña": "Contraseña1234",
   "id": 1,
   "mail": "mail",
-  "nombreApellido": "Nombre Apellido",
-  "numTarjeta": 123456789
+  "numTarjeta": 123456789,
+  "apellido": "Perez",
+  "domicilio": "Boqueron 2345",
+  "nombre": "Juan"
 }]

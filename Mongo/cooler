@@ -5,5 +5,24 @@
   "nombre": "nombre",
   "consumo": 0,
   "foto": "url",
-  "precio": 0
+  "precio": 0,
+  "id": 1
+},{
+  "_id": {
+    "$oid": "619a9be63c9a1a76ee20b0d5"
+  },
+  "nombre": "nombre",
+  "consumo": 0,
+  "foto": "url",
+  "precio": 0,
+  "id": 2
+},{
+  "_id": {
+    "$oid": "619a9beb3c9a1a76ee20b0d6"
+  },
+  "nombre": "nombre",
+  "consumo": 0,
+  "foto": "url",
+  "precio": 0,
+  "id": 3
 }]

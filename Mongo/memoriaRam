@@ -8,5 +8,6 @@
   "frecuencia": 0,
   "nombre": "nombre",
   "tipo": "DDR",
-  "precio": 0
+  "precio": 0,
+  "id": 1
 }]

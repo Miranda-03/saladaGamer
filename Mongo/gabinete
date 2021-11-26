@@ -8,5 +8,18 @@
   "tamañoMother": [
     "tamaño1"
   ],
-  "precio": 0
+  "precio": 0,
+  "id": 1
+},{
+  "_id": {
+    "$oid": "619a9c153c9a1a76ee20b0db"
+  },
+  "nombre": "nombre",
+  "foto": "url",
+  "tamañoFuente": "tamañoFuente",
+  "tamañoMother": [
+    "tamaño1"
+  ],
+  "precio": 0,
+  "id": 2
 }]

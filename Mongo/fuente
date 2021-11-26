@@ -6,5 +6,6 @@
   "foto": "url",
   "wats": 0,
   "precio": 0,
-  "tamaño": "ATx"
+  "tamaño": "ATx",
+  "id": 1
 }]
