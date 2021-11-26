@@ -93,6 +93,7 @@
     width: 100%;
 }
 
+
 #principal{
     background-image: radial-gradient(#1c384c,#111);    
 }
@@ -280,7 +281,7 @@ margin-left: 2%;
 
 #principal{
     position: absolute;
- display: block;
+  display: block;
 }
 
 #div-botones-procesadores{

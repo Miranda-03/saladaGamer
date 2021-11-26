@@ -55,7 +55,7 @@ function marca(marc){
 
           
           //document.getElementById("div-botones-procesadores").style.display = "none";
-
+          
           window.location.reload();
 
          
@@ -71,6 +71,18 @@ function agregar(id){
     }
     else if(instanciaArmado == 2){
       componente = "motherboard";
+    }
+    else if(instanciaArmado == 3){
+      componente ="memoriaRam";
+    }
+    else if(instanciaArmado == 4){
+      componente ="gpu";
+    }
+    else if(instanciaArmado == 5){
+      componente ="fuente";
+    }
+    else if(instanciaArmado == 6){
+      componente ="cooler";
     }
 
       $.ajax({
