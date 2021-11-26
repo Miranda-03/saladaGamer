@@ -60,9 +60,17 @@ public class Controller {
 
 
 
-    @RequestMapping(value = "/datos/alumnos/{id}", method = RequestMethod.POST)
-    public ResponseEntity<Object> agregarPagina(@RequestBody HashMap alumno, @PathVariable int id){
-
+    @RequestMapping(value = "/datos/usuario", method = RequestMethod.POST)
+    public ResponseEntity<Object> agregarPagina(@RequestBody HashMap usuario){
+        this.accesoMongo.conectar("saladaGamer", "usuario");
+        String contraseña = (String) usuario.get("contraseña");
+        Integer id = (Integer) usuario.get("id");
+        String mail = (String) usuario.get("mail");
+        Integer numeroTarjeta = (Integer) usuario.get("numTarjeta");
+        String apellido = (String) usuario.get("apellido");
+        String nombre = (String) usuatio.get("nombre");
+        String domicilio = (String) usuario.get("domicilio");
+        Usuario nuevoUsuario = new Usuario(id, nombre, apellido, contraseña, mail, numeroTarjeta, domicilio);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

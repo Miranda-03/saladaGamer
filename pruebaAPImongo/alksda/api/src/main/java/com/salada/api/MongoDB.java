@@ -321,6 +321,21 @@ class MongoDB {
         this.componenteActual = componenteActual;
     }
 
+    public void agregarUsuario(Usuario usuario){
+        this.conectar("saladaGamer", "usuario");
+        Document nuevoDocumento = new Document();
+
+        nuevoDocumento.append("nombre", usuario.getNombre());
+        nuevoDocumento.append("apellido", usuario.getApellido());
+        nuevoDocumento.append("id", usuario.getId());
+        nuevoDocumento.append("contraseña", usuario.getContraseña());
+        nuevoDocumento.append("mail", usuario.getMail());
+        nuevoDocumento.append("numeroTarjeta", usuario.getNumeroTarjeta());
+        nuevoDocumento.append("domicilio", usuario.getDomicilio());
+
+        coleccion.insertOne(nuevoDocumento);
+
+    }
 
     /**
      * documentación de clase Document
